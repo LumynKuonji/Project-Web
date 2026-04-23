@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Toko Sembako</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="top-bar">
+    <input class="search" type="text" placeholder="Cari produk...">
+    <div class="menu" onclick="toggleMenu()">☰</div>
+  </div>
+  <div class="logo">LOGO</div>
+</div>
+
+<!-- KATEGORI -->
+<div class="kategori">
+  <div onclick="filterProduk('semua')" class="active">Semua</div>
+  <div onclick="filterProduk('pokok')">Pokok</div>
+  <div onclick="filterProduk('instan')">Instan</div>
+</div>
+
+<!-- PRODUK -->
+<div class="container">
+  <div class="card" data-kategori="pokok">
+    <img src="https://via.placeholder.com/150">
+    <h4>Beras</h4>
+    <p>Rp 12000</p>
+  </div>
+
+  <div class="card" data-kategori="instan">
+    <img src="https://via.placeholder.com/150">
+    <h4>Indomie</h4>
+    <p>Rp 3500</p>
+  </div>
+</div>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+  <div onclick="goProfile()">👤</div>
+  <div onclick="openModal('cartModal')">🛒</div>
+  <div onclick="openModal('csModal')">🎧</div>
+</div>
+
+<!-- CART -->
+<div id="cartModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('cartModal')">&times;</span>
+    <h3>Keranjang</h3>
+    <div id="cartItems"></div>
+  </div>
+</div>
+
+<!-- CUSTOMER SERVICE -->
+<div id="csModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('csModal')">&times;</span>
+    <h3>Customer Service</h3>
+    <p>📧 moreno@gmail.com</p>
+    <p>📞 +62 812-7891-6777</p>
+  </div>
+</div>
+
+</body>
+</html>
